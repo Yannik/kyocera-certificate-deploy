@@ -26,6 +26,7 @@ def stepshot(driver, screenshots, suffix):
 
 screenshots = True
 certfile = sys.argv[1]
+password = sys.argv[2]
 
 logger = logging.getLogger()
 #logger.setLevel(logging.DEBUG)
@@ -48,7 +49,7 @@ driver.find_element_by_class_name('w10pt').click()
 # apparantly we don't need to select the frame again here
 stepshot(driver, screenshots, 2)
 password_field = driver.find_element_by_css_selector('input[name="arg02_Password"]')
-password_field.send_keys('admin00')
+password_field.send_keys(password)
 password_field.send_keys(Keys.RETURN)
 stepshot(driver, screenshots, 3)
 
