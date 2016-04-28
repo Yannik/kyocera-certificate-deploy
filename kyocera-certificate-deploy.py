@@ -81,7 +81,6 @@ if delete_button.get_attribute('disabled') is None:
 import_button = WebDriverWait(driver, 10).until(
     EC.presence_of_element_located((By.XPATH, '//input[contains(@onclick, "Import")]'))
 )
-#import_button = driver.find_element_by_xpath('//input[contains(@onclick, "Import")]')
 import_button.click()
 stepshot(driver, screenshots, 10)
 
