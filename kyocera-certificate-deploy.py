@@ -25,8 +25,9 @@ def stepshot(driver, screenshots, suffix):
         driver.save_screenshot('selenium_printer' + str(suffix) + '.png')
 
 screenshots = True
-certfile = sys.argv[1]
-password = sys.argv[2]
+host = sys.argv[1]
+certfile = sys.argv[2]
+password = sys.argv[3]
 
 logger = logging.getLogger()
 #logger.setLevel(logging.DEBUG)
@@ -39,7 +40,7 @@ logging.getLogger().addHandler(ch)
 driver = webdriver.PhantomJS(service_args=['--ignore-ssl-errors=true'])
 driver.set_window_size(1024, 768)
 
-driver.get('https://localhost:8444/')
+driver.get(host)
 stepshot(driver, screenshots, 1)
 
 driver.switch_to_frame("main")

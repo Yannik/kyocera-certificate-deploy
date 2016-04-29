@@ -5,4 +5,4 @@ Confirmed working printer models:
 
 Example usage:
 
-    ./kyocera-certificate-deploy.py /path/to/key_and_cert.pem password
+    ./kyocera-certificate-deploy.py "https://printer.internal.example.org" "/path/to/key_and_cert.pem" "password"
