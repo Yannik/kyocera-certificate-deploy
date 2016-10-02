@@ -2,6 +2,7 @@ This automates deployment of ssl certificates (e.g. from letsencrypt) to kyocera
 
 Confirmed working printer models:
   - Kyocera FS1370DN
+  - Kyocera FS-C5250DN
 
 Example usage:
 
